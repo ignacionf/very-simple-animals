@@ -64,7 +64,7 @@ KillSignal=SIGQUIT
 Type=notify
 NotifyAccess=all
 
-ExecStart=/ubuntu/very-simple-animals/venv/bin/uwsgi --socket localhost:8000 --manage-script-name --mount /=animals:app
+ExecStart=/home/ubuntu/very-simple-animals/venv/bin/uwsgi --socket localhost:8000 --manage-script-name --mount /=animals:app
 
 [Install]
 WantedBy=multi-user.target
