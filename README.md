@@ -16,6 +16,10 @@ This code support python 3.6, 3.7 or 3.8
 
 if you want use this function, you need get a develop key from https://unsplash.com/developers
 
+## Configure
+
+In `animals.py` you can modify the list `ANIMALS` with a tuple of ("animal name", "url"). If you want to use unsplash you must put the value None as url
+
 ## Run
 
 ```
