@@ -35,6 +35,9 @@ def get_unsplash_url(query):
         to get random image
     """
 
+    if not CLIENT_ID:
+        raise Exception("Get a dev key in https://unsplash.com/developers")
+
     params = (
         ('client_id', CLIENT_ID),
         ('query', query),
