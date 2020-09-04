@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Very Simple Animals Page</title>
+</head>
+<body>
+   <h1>Very Simple Animals Page</h1>
+
+    {% if context['error'] %}
+        <p style='color: red;'><strong>Error:</strong> {{ context['error'] }}</p> 
+    {% else %}
+        <div>
+            <h2>Animal selected: {{ context['animal'] }}</h2>
+            <img src="{{ context['url']}}">
+        </div>
+        <button type="button" onclick="location.href='/'">Get new animal</button>
+    {% endif %}
+</body>
+</html>
