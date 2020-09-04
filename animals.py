@@ -26,46 +26,14 @@ ANIMALS = (
     ("llama", None),
 )
 
-CLIENT_ID = os.getenv("UNSPLASH_KEY", None)
-
-
-def get_unsplash_url(query):
-    """
-        get url from unsplash. Use the animal name
-        to get random image
-    """
-
-    if not CLIENT_ID:
-        raise Exception("Get a dev key in https://unsplash.com/developers")
-
-    params = (
-        ('client_id', CLIENT_ID),
-        ('query', query),
-    )
-
-    response = requests.get(
-        'https://api.unsplash.com/photos/random',
-        params=params)
-
-    if not response.ok:
-        raise Exception("<br />".join(response.json()['errors']))
-
-    image_data = response.json()
-    # change small for raw or full to get best image resolution
-    return image_data['urls']['small']
-
 
 def get_animal_url(animal):
-    """
-        Get url from animal list. If url is None,
-        call the get_unsplash_url to get a random one
-    """
+    """ Get url from animal list.  """
 
     if animal[1]:
         return animal[1]
 
-    return get_unsplash_url(animal[0])
-
+    raise Exception(f"The animal '{animal[0]}' does not have a defined url")
 
 @app.route('/')
 def index():
