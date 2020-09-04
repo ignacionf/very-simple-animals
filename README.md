@@ -32,7 +32,9 @@ Just go "localhost:5000" in a browser
 To run this app as standalone service:
 
 ```
+$ sudo apt update
 $ sudo apt install nginx python3 python3-venv
+$ sudo apt-get install build-essential python3-dev
 $ pwd
 /home/ubuntu
 $ git clone https://github.com/ignacionf/very-simple-animals.git
