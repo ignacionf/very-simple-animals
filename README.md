@@ -97,4 +97,4 @@ $ sudo nginx -t     # test the config
 $ sudo systemctl reload nginx
 ```
 
-Test enter to the http://<ip>/
+Test enter to the http://ip_or_fqdn/
