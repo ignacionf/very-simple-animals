@@ -34,7 +34,7 @@ To run this app as standalone service:
 ```
 $ sudo apt update
 $ sudo apt install nginx python3 python3-venv
-$ sudo apt-get install build-essential python3-dev
+$ sudo apt-get install build-essential python3-dev git
 $ pwd
 /home/ubuntu
 $ git clone https://github.com/ignacionf/very-simple-animals.git
